@@ -51,5 +51,11 @@ Another movie that I didn't watch with you.
 
 # ❤️ February 14th - Valentine's Day
 VALENTINES_DAY = """
-aditi pe simp message likhna hai bada sa
+Dear Aditi, before I met you I used to think
+that love is all about compromise and a lil bit of anxiousness,
+but ever since you have come into my life, love has been only
+calm and peaceful however it is the most constant kinda love I have felt,
+You are the most perfect partnerr I could have hoped for and now no one else will do
+only you, even in anohther lifetime.just try your best to not go bald babe.
+I LOVE YOUUUUU SOOO MUCHHHH
 """
