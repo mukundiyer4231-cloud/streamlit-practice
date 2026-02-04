@@ -545,45 +545,55 @@ def main():
     current_day = today.day
     current_month = today.month
     
-    # Preview dropdown - always visible at top
-    st.markdown("""
-    <div class="preview-container">
-        <p class="preview-label">🎨 Preview Different Days</p>
-    </div>
-    """, unsafe_allow_html=True)
+    # Only show preview dropdown from Feb 15th onwards
+    show_dropdown = current_month == 2 and current_day >= 15
     
-    # Dropdown for day selection
-    day_options = {
-        0: "📅 Live Mode (Auto-detect date)",
-        7: "🌹 Feb 7 - Rose Day",
-        8: "💍 Feb 8 - Propose Day",
-        9: "🍫 Feb 9 - Chocolate Day",
-        10: "🧸 Feb 10 - Teddy Day",
-        11: "🤞 Feb 11 - Promise Day",
-        12: "🤗 Feb 12 - Hug Day",
-        13: "💋 Feb 13 - Kiss Day",
-        14: "❤️ Feb 14 - Valentine's Day",
-    }
-    
-    selected_day = st.selectbox(
-        "Select a day to preview:",
-        options=list(day_options.keys()),
-        format_func=lambda x: day_options[x],
-        label_visibility="collapsed"
-    )
-    
-    st.markdown("<br>", unsafe_allow_html=True)
-    
-    # Determine which day to show
-    if selected_day == 0:
-        # Live mode - check actual date
+    if show_dropdown:
+        # Preview dropdown - visible from Feb 15th onwards
+        st.markdown("""
+        <div class="preview-container">
+            <p class="preview-label">🎨 Preview Different Days</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Dropdown for day selection
+        day_options = {
+            0: "📅 Live Mode (Auto-detect date)",
+            7: "🌹 Feb 7 - Rose Day",
+            8: "💍 Feb 8 - Propose Day",
+            9: "🍫 Feb 9 - Chocolate Day",
+            10: "🧸 Feb 10 - Teddy Day",
+            11: "🤞 Feb 11 - Promise Day",
+            12: "🤗 Feb 12 - Hug Day",
+            13: "💋 Feb 13 - Kiss Day",
+            14: "❤️ Feb 14 - Valentine's Day",
+        }
+        
+        selected_day = st.selectbox(
+            "Select a day to preview:",
+            options=list(day_options.keys()),
+            format_func=lambda x: day_options[x],
+            label_visibility="collapsed"
+        )
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Determine which day to show
+        if selected_day == 0:
+            # Live mode - check actual date
+            if current_month == 2 and 7 <= current_day <= 14:
+                render_day(current_day)
+            else:
+                render_waiting()
+        else:
+            # Preview mode
+            render_day(selected_day)
+    else:
+        # Before Feb 15th - automatic live mode, no dropdown
         if current_month == 2 and 7 <= current_day <= 14:
             render_day(current_day)
         else:
             render_waiting()
-    else:
-        # Preview mode
-        render_day(selected_day)
 
 if __name__ == "__main__":
     main()
