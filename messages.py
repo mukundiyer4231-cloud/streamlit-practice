@@ -32,8 +32,9 @@ Because only I can cuddle you to sleep.
 
 # 🤞 February 11th - Promise Day
 PROMISE_DAY = """
-I promise to always be autistic and 
-always write these sweet messages for you.
+I promise to always treat you with
+utmost respect, care and maturity. I will continue 
+to adore you till the day I perish.
 """
 
 # 🤗 February 12th - Hug Day
@@ -59,3 +60,4 @@ You are the most perfect partnerr I could have hoped for and now no one else wil
 only you, even in anohther lifetime.just try your best to not go bald babe.
 I LOVE YOUUUUU SOOO MUCHHHH
 """
+
