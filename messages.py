@@ -48,6 +48,8 @@ KISS_DAY = """
 there is a song called sober to death, which has the lyric-
 Lovely lovely, in your jeans frenzy
 Another movie that I didn't watch with you.
+However, in all seriousness I think we should have
+a HARDCORE makeout session sometime soon.
 """
 
 # ❤️ February 14th - Valentine's Day
@@ -60,4 +62,5 @@ You are the most perfect partnerr I could have hoped for and now no one else wil
 only you, even in anohther lifetime.just try your best to not go bald babe.
 I LOVE YOUUUUU SOOO MUCHHHH
 """
+
 
