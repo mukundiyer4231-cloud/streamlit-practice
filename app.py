@@ -65,7 +65,7 @@ def get_mobile_base_css():
         background: rgba(255, 255, 255, 0.92);
         border-radius: 24px;
         padding: 30px 24px;
-        margin: 8vh auto 20px auto;
+        margin: 20vh auto 20px auto;
         max-width: 380px;
         width: 90%;
         box-shadow: 
